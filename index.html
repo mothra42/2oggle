@@ -2,92 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/styleWelcome.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
-    <title>Toggle Game!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <title>Toggle</title>
 </head>
 
 <body>
-    <!-- <div id="fb-root"></div> -->
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-2" id="left">
+
+        <div id="timer"></div>
+        <div id="score"></div>
+      </div>
+
+      <div class="col-md-5" id="center">
+
+      </div>
+
+      <div class="col-md-1">
+      </div>
 
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="top">It's Tetris!</h1>
-            </div>
-
-            <div class="col-md-12">
-                <h1 class="middle">It's Boggle!</h1>
-
-            </div>
-
-            <div class="col-md-12 nit">
-                <h1 class="bottom">No its Toggle!</h1>
-            </div>
+      <div class="col-md-4">
+        <div class="col-md-12 holder">
+          <h2>HIGHEST SCORES</h2>
+          <div id="leaderboardScore"></div>
         </div>
 
 
-
-        <div class="row">
-            <div class="col-md-1">
-            </div>
-
-            <div class="col-md-4 usersignin">
-
-                <form action="" method="POST" role="form">
-                    <div class="form-group">
-                        <label for="firstname">Name:</label>
-                        <input type="name" class="form-control" id="userfname" placeholder="Name">
-                    </div>
-
-                    <button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
-
-                </form>
-            </div>
-
-            <div class="col-md-2">
-                <h3 class="signup"><-- Sign up & play --></h3>
-            </div>
-
-            <div class="col-md-4 fbsignin">
-
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" login_text="" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=478181479203783&amp;container_width=0&amp;locale=en_US&amp;scope=public_profile%2Cemail&amp;sdk=joey"><span style="vertical-align: bottom; width: 128px; height: 44px;"><iframe name="f640835fb05658" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:login_button Facebook Social Plugin" src="https://www.facebook.com/v2.8/plugins/login_button.php?app_id=478181479203783&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F0sTQzbapM8j.js%3Fversion%3D42%23cb%3Dfecc3b7dc2189c%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A3000%252Ff19bea5873cba5%26relation%3Dparent.parent&amp;container_width=0&amp;locale=en_US&amp;scope=public_profile%2Cemail&amp;sdk=joey" style="border: none; visibility: visible; width: 64px; height: 22px;" class=""></iframe></span></fb:login-button>
-                <br>
-                <button onclick="javascript:logout();">Logout from Facebook</button>
-                <div class="col-md-1 green">
-                </div>
-            </div>
+        <div class="col-md-12 bolder">
+          <h2>LONGEST WORDS</h2>
+          <div id="leaderboardWord"></div>
         </div>
+      </div>
 
-        <div class="row">
-            <div class="col-md-2">
-                <img src="assets/images/pk_burned.png" class="left">
-            </div>
-
-            <div class="col-md-8">
-
-                <audio controls autoplay loop>
-                    <source src="../headless.mp3" type="audio/mp3">
-
-                </audio>
-            </div>
-
-            <div class="col-md-2">
-                <img src="assets/images/pk_burned.png" class="right">
-            </div>
-        </div>
     </div>
 
-    </div>
-    <script type="text/javascript" src="welcome.js"></script>
+  </div>
+  <script src="canvas.js"></script>
+
 </body>
 
 </html>
